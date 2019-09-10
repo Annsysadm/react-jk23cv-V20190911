@@ -17,7 +17,6 @@ export class People extends Component {
         if (this.props.isLoading) {
             return <p>Loading…</p>;
         }
-        console.log(this.props)
         return (
           <div className="container movies">
                 <h1>Famous People (TMDb)</h1>

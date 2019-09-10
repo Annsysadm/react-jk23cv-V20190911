@@ -17,7 +17,6 @@ export class TvShows extends Component {
         if (this.props.isLoading) {
             return <p>Loading…</p>;
         }
-        console.log(this.props)
         return (
           <div className="container movies">
                 <h1>TOP TV Shows (TMDb)</h1>
@@ -25,7 +24,7 @@ export class TvShows extends Component {
                   <div className="container posters">
                   <img src={'https://image.tmdb.org/t/p/w185'+movie.poster_path} />
                   <p  className='title'>{movie.name}</p>
-                  <p  className='language'>first air date: {movie.first_air_date}</p>
+                  <p  className='release_date'>release date: {movie.first_air_date}</p>
                   <p><span className='star'>&#10026;</span> {movie.vote_average}</p>
                   </div>
               ))}
@@ -33,7 +32,7 @@ export class TvShows extends Component {
         )
     }
 }
-// 
+ 
 const mapStateToProps = (state) => {
     return {
         items: state.items,

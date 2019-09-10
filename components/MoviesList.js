@@ -17,7 +17,6 @@ export class MoviesList extends Component {
         if (this.props.isLoading) {
             return <p>Loading…</p>;
         }
-        console.log(this.props)
         return (
           <div className="container movies">
                 <h1>TOP Movies 2019 (TMDb)</h1>
